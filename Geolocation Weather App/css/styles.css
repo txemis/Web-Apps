@@ -1,0 +1,94 @@
+body {
+  font-family: "Ek Mukta", "Helvetica Neue", sans-serif;
+  background-repeat: no-repeat;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+  background-attachment: fixed;
+}
+.topRow {
+  top: 15vh;
+  padding-bottom: 15vh;
+}
+.box {
+  background-color: white;
+  border-radius: 20px;
+  padding: 15px 25px;
+  box-shadow: 3px 3px 10px #C4C4C4;
+}
+#day {
+  font-size: 36px;
+  letter-spacing: 2px;
+}
+#coverage {
+  font-size: 30px;
+  letter-spacing: 2px;
+}
+i {
+  font-size: 80px;
+}
+#time {
+  float: right;
+  font-size: 36px;
+  letter-spacing: 2px;
+}
+#buttonBox {
+  padding:0px;
+}
+#celcius, #fehrenheit {
+  float:right;
+  background-color: #33C4F5;
+  color: white;
+  font-size: 26px;
+  font-weight: 800;
+  border-width: 0px;
+  border-radius: 5px;
+  box-shadow: 1px 1px 1px #C4C4C4;
+  padding: 5px 15px 2px 15px;
+  margin-left: 5px;
+}
+#refresh {
+  float:right;
+  background-color: #33C4F5;
+  color: white;
+  font-size: 20px;
+  border-width: 0px;
+  border-radius: 5px;
+  box-shadow: 1px 1px 1px #C4C4C4;
+  padding: 11px 13px 5px 13px;
+  margin-left: 5px;
+}
+#fehrenheit {
+  /* default fehrenheit opacity to appear selected*/
+  opacity: 0.75;
+}
+#refresh:focus, #fehrenheit:focus, #celcius:focus {
+  outline: 0;
+}
+#temp span{
+  font-size: 180px;
+  padding-left: 20px;
+  text-shadow: 3px 4px #F2F2F2;
+}
+#temp sup {
+  font-size: 60px;
+  top: -1.4em;
+  text-shadow: 2px 3px #F2F2F2;
+}
+#location {
+  font-size: 60px;
+  padding-bottom: 20px;
+  letter-spacing: 2px;
+  text-shadow: 2px 2px #F2F2F2;
+}
+#country {
+  font-size: 26px;
+  padding-bottom: 25px;
+}
+.bottomInfo {
+  padding-left: 0px;
+  padding-bottom: 40px;
+  font-size: 24px;
+  letter-spacing: 1.2px;
+}

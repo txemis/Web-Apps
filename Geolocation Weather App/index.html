@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="">
+  <meta name="author" content="">
+
+  <title>Geolocation Weather App</title>
+
+  <!-- Vendor CSS -->
+  <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+  <link href="vendor/font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+  <link href="vendor/weather-icons/css/weather-icons.min.css" rel="stylesheet" type="text/css">
+
+
+  <!-- Custom Fonts -->
+  <link href="https://fonts.googleapis.com/css?family=Ek+Mukta:300" rel="stylesheet">
+
+  <!-- Theme & Plugin CSS -->
+  <link href="css/styles.css" rel="stylesheet">
+
+
+</head>
+
+<body>
+
+  <section class="container-fluid">
+    <div class="weather row">
+      <div class="col-lg-4 col-lg-push-4 col-md-6 col-md-push-3 col-sm-9 col-sm-push-2 col-xs-12 topRow">
+        <div class="box"> <!-- Outer White Box -->
+          <div class="row">
+
+            <div class="col-xs-6">
+              <div id="day"></div>
+              <div id="coverage"></div>
+            </div>
+
+            <div class="col-xs-6">
+              <div class="row">
+                <div class="col-xs-12">
+                  <div id="time"></div>
+                </div>
+                <div class="col-xs-12" id="buttonBox">
+                  <!-- Unit Switch Button -->
+                    <button id="refresh">
+                      <span class="fa fa-refresh"></span>
+                    </button>
+
+                    <button id="celcius">
+                      <span>C</span>
+                    </button>
+
+                    <button id="fehrenheit">
+                      <span>F</span>
+                    </button>
+
+                </div>
+              </div>
+            </div>
+
+          </div><!-- top row end -->
+
+          <div class="row text-center">
+            <div class="col-xs-12">
+              <div id="temp"><span></span><sup>o</sup></div>
+              <div id="location">Your Location</div>
+            </div>
+          </div>
+
+          <div class="row bottomInfo">
+            <div class="col-xs-6 text-right">
+              <i id="icon"></i>
+            </div>
+            <div class="col-xs-6 ">
+              <div id="precip"></div>
+              <div id="humid"></div>
+              <div id="wind">Wind: <span></span></div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+  <!-- jQuery -->
+  <script src="vendor/jquery/jquery.min.js"></script>
+
+  <!-- Bootstrap Core JavaScript -->
+  <script src="vendor/bootstrap/js/bootstrap.min.js"></script>
+
+  <!-- App Scripts -->
+  <script src="js/scripts.js"></script>
+
+
+
+</body>
+</html>
