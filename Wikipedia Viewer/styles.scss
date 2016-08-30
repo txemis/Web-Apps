@@ -1,0 +1,96 @@
+$primary-color: black
+$secondary-color: white
+$primary-background: #354561
+$secondary-background: white
+$btn-background: #ED951A
+
+body
+  background-color: $primary-background
+
+a:link, a:visited, a:hover, a:active
+  text-decoration: none
+
+h1, h2, h3, h4, h5, p
+  color: $primary-color
+
+.centered
+  position: absolute
+  top: 30%
+  left: 45%
+  -webkit-transition: top 1s
+  -moz-transition: top 1s
+  -o-transition: top 1s
+  transition: top 1s
+
+.fa-question
+  font-size: 200px
+  color: $secondary-color
+  cursor: pointer
+
+#question p
+  color: $secondary-color
+  font-size: 16px
+  position: absolute
+  top: 55%
+  left: 45%
+  -webkit-transition: top 1s
+  -moz-transition: top 1s
+  -o-transition: top 1s
+  transition: top 1s
+
+#box-main
+  top: 50vh
+  opacity: 0
+  display: none
+  -webkit-transition: top 1s
+  -moz-transition: top 1s
+  -o-transition: top 1s
+  transition: top 1s
+
+#header h2
+  color: $secondary-color
+
+#searchBox
+  border-radius: 25px
+  border: transparent
+  padding: 5px
+  width: 100%
+
+#searchBtn, #randomBtn, #resetBtn
+  margin-bottom: 15px
+  margin-top: 5px
+  background-color: $btn-background
+  border: transparent
+
+#searchBtn, #randomBtn
+  margin-right: 15px
+
+#randomBtn
+  font-size: 16px
+
+#searchBox:focus, #searchBtn:focus, #randomBtn:focus, #resetBtn:focus
+  outline: none
+
+#content
+  padding-top: 150px
+  -webkit-transition: all 1.5s
+  -moz-transition: all 1.5s
+  -o-transition: all 1.5s
+  transition: all 1.5s
+
+.contentWrap
+  background: $secondary-background
+  opacity: 0
+  border-radius: 5px
+  border-left: solid
+  border-color: transparent
+
+.contentWrap:hover
+  border-color: $btn-background
+
+.contentWrap h3
+  padding: 20px 15px 10px 25px
+
+.contentWrap p
+  padding: 0px 15px 25px 25px
+ 
