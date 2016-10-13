@@ -1,0 +1,38 @@
+run commands:
+> npm init
+> npm install --save react react-dom
+> npm install --save-dev html-webpack-plugin webpack webpack-dev-server babel-core babel-loader babel-preset-react
+
+
+setup following pages:
+- app/index.html
+- app/index.js
+- .babelrc
+- webpack.config.js
+
+add to 'package.json' scripts:
+  "production": "webpack -p"
+  "start": "webpack-dev-server"
+
+run commands:
+> npm run production
+--> This creates the Dist(index.html, index_bundle.js) directory.
+
+install React Router:
+> npm install --save react-router@2.0.0-rc5
+
+install axios (for making https requests to APIs from node server, etc)
+> npm install --save axios
+
+check local file works on browser:
+browser -> (ctrl + o)
+
+check works on localhost:8080
+> npm run start
+
+
+-------------------
+animations:
+> npm install --save react-addons-css-transition-group
+
+> npm install --save-dev css-loader style-loader
