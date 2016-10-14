@@ -19,26 +19,77 @@ var ListContainer = React.createClass({
 
       // store current object from array into partial object array
       var listPartial = [this.props.listData[j]];
-      console.log(seconds);
-      // set style based on admin_time
-      if (seconds >= (this.props.listData[j].administration_time - 5)
-      && seconds <= this.props.listData[j].administration_time ) {
-        var setStyle = styles.timeWarning;
-      } else if (seconds > this.props.listData[j].administration_time){
-        var setStyle = styles.timePassed;
-      } else {
-        var setStyle = styles.timeNormal;
+
+      //set style to normal to prevent loop carrying over style falsely
+      var setStyle = styles.timeNormal;
+
+      // set style based on admin_hour && admin_mins
+      if (this.props.listData[j].admin_mins == 0) {
+        if ((hours24 == this.props.listData[j].admin_hour - 1) && (minutes >= 45) && (minutes < 60)) {
+          var setStyle = styles.timeWarning;
+        } else if (hours24 >= this.props.listData[j].admin_hour) {
+          var setStyle = styles.timePassed;
+        }
       }
+
+      if (this.props.listData[j].admin_mins == 15) {
+        if ((hours24 == this.props.listData[j].admin_hour) && (minutes >= 0) && (minutes < 15)) {
+          var setStyle = styles.timeWarning;
+        } else if ((hours24 == this.props.listData[j].admin_hour) && (minutes > 15)) {
+          var setStyle = styles.timePassed;
+        } else if (hours24 >= this.props.listData[j].admin_hour) {
+          var setStyle = styles.timePassed;
+        }
+      }
+
+      if (this.props.listData[j].admin_mins == 30) {
+        if ((hours24 == this.props.listData[j].admin_hour) && (minutes >= 15) && (minutes < 30)) {
+          var setStyle = styles.timeWarning;
+        } else if ((hours24 == this.props.listData[j].admin_hour) && (minutes > 30)) {
+          var setStyle = styles.timePassed;
+        } else if (hours24 >= this.props.listData[j].admin_hour) {
+          var setStyle = styles.timePassed;
+        }
+      }
+
+      if (this.props.listData[j].admin_mins == 45) {
+        if ((hours24 == this.props.listData[j].admin_hour) && (minutes >= 30) && (minutes < 45)) {
+          var setStyle = styles.timeWarning;
+        } else if ((hours24 == this.props.listData[j].admin_hour) && (minutes > 45)) {
+          var setStyle = styles.timePassed;
+        } else if (hours24 >= this.props.listData[j].admin_hour) {
+          var setStyle = styles.timePassed;
+        }
+      }
+
+      // dont display minutes when minutes == 0
+      if (this.props.listData[j].admin_mins == 0) {
+        var minuteStyle = styles.minutesDisplayNone;
+      } else {
+        var minuteStyle = styles.minutes;
+      }
+
 
       // map one of the objects from object array 'listData'
       var listItem = listPartial.map(function(data, i) {
+
+        // set AM / PM while preserving admin_hour being 24hr clock
+        if (data.admin_hour > 12){
+          var twelveHourDisplay = data.admin_hour - 12;
+          var ampm = 'pm';
+        } else {
+          var twelveHourDisplay = data.admin_hour;
+          var ampm = 'am';
+        }
+
         return (
           <section className='container-fluid'>
 
             <div className='row' key={j + '_' + i} style={setStyle}>
               <div className='col-xs-6 col-sm-4 col-sm-offset-1 col-md-4 col-md-offset-2 col-lg-3 col-lg-offset-3'>
-                <span id='timeNum' style={styles.timeNum}>{data.administration_time}</span>
-                <div id='ampm' style={styles.ampm}>am</div>
+                <span id='timeNum' style={styles.timeNum}>{twelveHourDisplay}</span>
+                <span id='minutes' style={minuteStyle}>{data.admin_mins}</span>
+                <div id='ampm' style={styles.ampm}>{ampm}</div>
               </div>
 
               <div className='col-xs-6 col-sm-6 col-md-4 col-lg-3 text-right'>
@@ -80,7 +131,7 @@ var ListContainer = React.createClass({
   componentDidMount: function(){
     window.setInterval(function () {
       this.getList();
-    }.bind(this), 1000);
+    }.bind(this), 2000);
   },
 
   render: function () {
@@ -98,15 +149,25 @@ const styles = {
     color: 'white',
     backgroundColor: '#50D2C0',
     borderRadius: '3px',
-    padding: '0px 20px'
+    padding: '5px 15px'
+  },
+
+  minutes: {
+    fontSize: '36px',
+    color: '#50D2C0',
+    paddingLeft: '5px'
+  },
+
+  minutesDisplayNone: {
+    display: 'none'
   },
 
   ampm: {
     fontSize: '30px',
-    fontWeight: '900',
+    fontWeight: '500',
     color: 'white',
     padding: '0px',
-    letterSpacing: '5px',
+    letterSpacing: '2px',
     position: 'absolute',
     bottom: '0px',
     left: '20px'

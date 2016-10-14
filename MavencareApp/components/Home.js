@@ -1,48 +1,65 @@
 var React = require('react');
 var ReactRouter = require('react-router');
-var ClockContainer = require('../containers/ClockContainer');
-var ListContainer = require('../containers/ListContainer');
-var NavBars = require('./NavBars');
-var LIST_DATA = [
-  {
-    medication: "Levodopa",
-    dosage:"2 Capsules",
-    administration_time: 8
-  },
-  {
-    medication: "Ibuprofen",
-    dosage:"4 Tablets",
-    administration_time: 10
-  },
-  {
-    medication: "Penicillin",
-    dosage:"50 mL",
-    administration_time: 14
-  },
-  {
-    medication: "Morphine",
-    dosage:"280 mg",
-    administration_time: 17
-  },
-  {
-    medication: "Ritalin",
-    dosage:"2 Capsules",
-    administration_time: 21
-  }
-]
+var Link = ReactRouter.Link;
+var Radium = require('radium');
 
 
-var Home = React.createClass({
+// written as a function since it is stateless (aka only has a render method)
+function Home (props) {
+  return (
+    <section className='container-fluid' style={styles.page}>
+      <div className='row text-center' style={styles.titleContainer}>
+        <Link to='/today'>
+          <button type='button' className='btn btn-lg btn-success' style={styles.button}>
+            <div style={styles.title}>Medication Reminder</div>
+            <div style={styles.slogan}>Get Started</div>
+          </button>
 
-  render: function () {
-    return (
-      <div>
-        <NavBars />
-        <ListContainer listData={LIST_DATA}/>    
+        </Link>
       </div>
-    )
 
+    </section>
+  )
+}
+
+
+const styles = {
+  page: {
+    backgroundColor: '#34344d',
+    color: 'white',
+    position: 'absolute',
+    top: '0',
+    bottom: '0',
+    left: '0',
+    width: '100%'
+  },
+
+  titleContainer: {
+    position: 'relative',
+    top: '30vh'
+  },
+
+  title: {
+    fontSize: '60px',
+    color: 'white'
+  },
+
+  slogan: {
+    position: 'relative',
+    top:'25px',
+    fontSize: '26px',
+    padding: '10px',
+    color: 'white'
+  },
+
+  button: {
+    backgroundColor: 'transparent',
+    borderWidth: '10px',
+    borderColor: 'white',
+    borderStyle: 'solid',
+    borderRadius: '5px',
+    padding: '50px'
   }
-});
+};
 
-module.exports = Home;
+module.exports = Radium(Home);

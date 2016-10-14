@@ -7,8 +7,22 @@ var style = require('../styles/List_style');
 
     setTime: function(){
       var currentdate = new Date();
-      hours = currentdate.getHours();
 
+      //get name of day of week
+      var dayOfWeek = currentdate.getDay();
+      var weekArray = ['Sunday', 'Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday'];
+      var dayName = weekArray[dayOfWeek];
+
+      //get name of month of year
+      var monthOfYear = currentdate.getMonth();
+      var monthArray = ['January', 'February', 'March', 'April', 'May', 'June', 'July', 'August', 'September', 'October', 'November', 'December'];
+      var month = monthArray[monthOfYear];
+
+      //get day number of month
+      var dayNumber = currentdate.getDate();
+
+      hours = currentdate.getHours();
+      hours24 = hours; 
         // correct for number over 24, and negatives
         if( hours >= 24 ){ hours -= 24; }
         if( hours >= 13 && hours <= 23){ hours -= 12; }
@@ -27,7 +41,10 @@ var style = require('../styles/List_style');
         this.setState({
           hours: hours,
           minutes: minutes,
-          seconds: seconds
+          seconds: seconds,
+          dayName: dayName,
+          dayNumber: dayNumber,
+          month: month
         });
     },
     componentWillMount: function(){
@@ -45,7 +62,10 @@ var style = require('../styles/List_style');
         <Clock
           hours={this.state.hours}
           minutes={this.state.minutes}
-          seconds={this.state.seconds} />
+          seconds={this.state.seconds}
+          dayName={this.state.dayName}
+          dayNumber={this.state.dayNumber}
+          month={this.state.month} />
       )
     }
   });

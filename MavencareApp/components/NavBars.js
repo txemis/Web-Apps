@@ -3,7 +3,7 @@ var ReactRouter = require('react-router');
 var ClockContainer = require('../containers/ClockContainer');
 var FontAwesome = require('react-fontawesome');
 var Radium = require('radium');
-var ReactDelayRender = require('react-delay-render');
+var Link = ReactRouter.Link;
 
 
 var SideNav = React.createClass({
@@ -39,7 +39,6 @@ var SideNav = React.createClass({
     },
 
 
-
   render: function () {
     return (
     <div className='container-fluid'>
@@ -59,7 +58,9 @@ var SideNav = React.createClass({
         className='sidenavElement e2'
         key="e2"
         style={[styles.sidenavElement, styles.activeColor, styles.eHover]}>
-          <a href="#" style={[styles.sidenavElementAnchor, styles.sidenavElementE2E7Anchor]}>Today</a>
+          <Link to='/today'>
+            <a href="#" style={[styles.sidenavElementAnchor, styles.sidenavElementE2E7Anchor]}>Today</a>
+          </Link>
         </div>
 
         <div
@@ -79,13 +80,15 @@ var SideNav = React.createClass({
           className='sidenavElement e4'
           key="e4"
           style={[styles.sidenavElement, styles.eHover]}>
-          <a href="#" style={styles.sidenavElementAnchor}>
-            <FontAwesome
-              className="medkitIcon"
-              name='medkit'
-              size='3x'
-              style={styles.medkit}/>
-          </a>
+          <Link to='/medlist'>
+            <a href="#" style={styles.sidenavElementAnchor}>
+              <FontAwesome
+                className="medkitIcon"
+                name='medkit'
+                size='3x'
+                style={styles.medkit}/>
+            </a>
+          </Link>
         </div>
 
         <div
@@ -137,7 +140,6 @@ var SideNav = React.createClass({
 
         <div className='col-xs-8 text-center'>
           <h1 id='clock'><ClockContainer /></h1>
-          <p id='date' style={styles.date}>Tuesday, April 14th</p>
         </div>
 
         <div className='col-xs-2 text-right'>
@@ -160,7 +162,7 @@ const styles = {
   navbar: {
     backgroundColor: '#34344d',
     color: 'white',
-    padding: '10px 5px',
+    padding: '10px 5px'
   },
 
   hamburger: {
@@ -241,7 +243,7 @@ const styles = {
     borderWidth: '0px',
     padding: '0px',
     overflow: 'hidden',
-    padding: '18px'
+    padding: '20px'
   },
 
   eHover: {
