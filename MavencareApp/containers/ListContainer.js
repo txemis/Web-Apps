@@ -83,9 +83,11 @@ var ListContainer = React.createClass({
         }
 
         return (
-          <section className='container-fluid'>
+          <section
+            key={'list_'+ j}
+            className='container-fluid'>
 
-            <div className='row' key={j + '_' + i} style={setStyle}>
+            <div className='row' style={setStyle}>
               <div className='col-xs-6 col-sm-4 col-sm-offset-1 col-md-4 col-md-offset-2 col-lg-3 col-lg-offset-3'>
                 <span id='timeNum' style={styles.timeNum}>{twelveHourDisplay}</span>
                 <span id='minutes' style={minuteStyle}>{data.admin_mins}</span>
@@ -96,7 +98,7 @@ var ListContainer = React.createClass({
                 <div className='row'>
                   <div id='drug' style={styles.drug}>{data.medication}</div>
                 </div>
-                <div class='row'>
+                <div className='row'>
                   <div id='dose' style={styles.dose}>{data.dosage}</div>
                 </div>
               </div>
@@ -126,12 +128,18 @@ var ListContainer = React.createClass({
   //lifecycle event triggers prior to the first render, which generates the list
   componentWillMount: function(){
     this.getList();
+    console.log('list has mounted');
   },
 
   componentDidMount: function(){
-    window.setInterval(function () {
+    listInterval = setInterval(function () {
       this.getList();
-    }.bind(this), 2000);
+    }.bind(this), 1000);
+  },
+
+  componentWillUnmount: function () {
+    console.log('list unmount');
+    clearInterval(listInterval);
   },
 
   render: function () {
@@ -145,7 +153,7 @@ const styles = {
   timeNum: {
     position: 'relative',
     top: '5px' ,
-    fontSize: '100px',
+    fontSize: '80px',
     color: 'white',
     backgroundColor: '#50D2C0',
     borderRadius: '3px',
@@ -153,7 +161,7 @@ const styles = {
   },
 
   minutes: {
-    fontSize: '36px',
+    fontSize: '30px',
     color: '#50D2C0',
     paddingLeft: '5px'
   },
@@ -163,7 +171,7 @@ const styles = {
   },
 
   ampm: {
-    fontSize: '30px',
+    fontSize: '20px',
     fontWeight: '500',
     color: 'white',
     padding: '0px',
@@ -175,7 +183,7 @@ const styles = {
 
   drug: {
     color: '#276e64',
-    fontSize: '60px',
+    fontSize: '30px',
     fontWeight: '600',
     padding: '10px 10px 5px 5px'
   },

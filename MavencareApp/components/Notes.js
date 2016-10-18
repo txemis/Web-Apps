@@ -1,13 +1,13 @@
 var React = require('react');
 
-function MedList (props) {
+function Notes (props) {
   return (
 
     <section
       className='container-fluid'>
-      {props.medList}
+      {props.noteList}
     </section>
   )
 }
 
-module.exports = MedList;
+module.exports = Notes;

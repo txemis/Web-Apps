@@ -30,9 +30,20 @@ browser -> (ctrl + o)
 check works on localhost:8080
 > npm run start
 
-
 -------------------
-animations:
+Extensions
+-------------------
+Animations:
 > npm install --save react-addons-css-transition-group
-
 > npm install --save-dev css-loader style-loader
+
+Radium:
+> npm install radium
+
+Reflux:
+> npm install --save redux
+> npm install --save react-redux
+> npm install --save-dev redux-devtools
+
+React-Bootstrap:
+> npm install react-bootstrap --save

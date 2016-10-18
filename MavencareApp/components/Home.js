@@ -4,23 +4,38 @@ var Link = ReactRouter.Link;
 var Radium = require('radium');
 
 
-// written as a function since it is stateless (aka only has a render method)
-function Home (props) {
-  return (
-    <section className='container-fluid' style={styles.page}>
-      <div className='row text-center' style={styles.titleContainer}>
-        <Link to='/today'>
-          <button type='button' className='btn btn-lg btn-success' style={styles.button}>
-            <div style={styles.title}>Medication Reminder</div>
-            <div style={styles.slogan}>Get Started</div>
-          </button>
+var Home = React.createClass({
 
-        </Link>
-      </div>
+  componentWillMount: function () {
+    notesListMaster = [{
+      time: '6:30 am',
+      entry: 'patient morning routines (washroom, hygiene, clothes) completed.'
+    },
+    {
+      time: '7:15 am',
+      entry: 'patient received and ate all of their breakfast.'
+    },
+    {
+      time: '8:30 am',
+      entry: '2 capsules of Levodopa administered.'
+    }]
+  },
 
-    </section>
-  )
-}
+  render: function () {
+    return (
+      <section className='container-fluid' style={styles.page}>
+        <div className='row text-center' style={styles.titleContainer}>
+          <Link to='/today'>
+            <button type='button' className='btn btn-lg btn-success' style={styles.button}>
+              <div style={styles.title}>Medication Reminder</div>
+              <div style={styles.slogan}>Get Started</div>
+            </button>
+          </Link>
+        </div>
+      </section>
+    )
+  }
+});
 
 
 const styles = {

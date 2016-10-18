@@ -8,6 +8,7 @@ var Main = require('../components/Main');
 var Home = require('../components/Home');
 var TodayContainer = require('../containers/TodayContainer');
 var MedListContainer = require('../containers/MedListContainer');
+var NotesContainer =  require('../containers/NotesContainer');
 
 var routes = (
   <Router history={hashHistory}>
@@ -15,6 +16,7 @@ var routes = (
       <IndexRoute component={Home} />
       <Route path='today' component={TodayContainer} />
       <Route path='medlist' component={MedListContainer} />
+      <Route path='notes' component={NotesContainer} />
     </Route>
   </Router>
 );

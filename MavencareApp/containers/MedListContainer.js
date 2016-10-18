@@ -31,7 +31,9 @@ var MedListContainer = React.createClass({
       // map one of the objects from object array 'listData'
       var listDataMapped = listPartial.map(function(data, i) {
         return (
-          <section className='container-fluid'>
+          <section
+            key={'medlist_'+ j}
+            className='container-fluid'>
             <div className='row'>
               <div className='col-sm-4 col-sm-offset-2 text-right' style={styles.medication}>
                 {data.medication}

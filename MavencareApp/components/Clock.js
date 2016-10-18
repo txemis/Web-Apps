@@ -4,7 +4,7 @@ function Clock (props) {
   return (
     <div>
       <div style={styles.clock}>
-        {props.hours}:{props.minutes}:{props.seconds}
+        {props.hours}:{props.minutes} {props.ampm}
       </div>
       <div style={styles.date}>
         {props.dayName}, {props.month} {props.dayNumber}

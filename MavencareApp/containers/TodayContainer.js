@@ -5,14 +5,19 @@ var NavBars = require('../components/NavBars');
 var ListData = require('../config/ListData');
 
 
-function TodayContainer (props) {
-  return (
-    <div>
-      <NavBars />
-      <ListContainer listData={ListData}/>
-    </div>
-  )
-}
+var TodayContainer = React.createClass ({
+
+  render: function() {
+      return (
+        <div>
+          <NavBars />
+          <ListContainer
+            listData={ListData}/>
+        </div>
+      )
+
+  }
+});
 
 
 module.exports = TodayContainer;
