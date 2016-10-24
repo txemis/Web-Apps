@@ -82,6 +82,10 @@ var SideNav = React.createClass({
     });
   },
 
+  setActive: function() {
+
+  },
+
   render: function () {
     // set state for modals upon mounting to be hidden
     let NotesClose = () => this.setState({ ShowNotesModal: false });
@@ -104,7 +108,7 @@ var SideNav = React.createClass({
         <div
         className='sidenavElement e2'
         key="e2"
-        style={[styles.sidenavElement, styles.eHover]}>
+        style={[styles.sidenavElement, styles.eHover, this.state.todayActive]}>
           <Link to='/today'>
             <span style={[styles.sidenavElementAnchor, styles.sidenavElementE2E7Anchor]}>Today</span>
           </Link>

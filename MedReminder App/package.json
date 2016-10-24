@@ -1,8 +1,8 @@
 {
-  "name": "mavencare-app",
+  "name": "medication-reminder-app",
   "version": "1.0.0",
   "description": "",
-  "main": "index.js",
+  "main": "webpack.config.js",
   "scripts": {
     "production": "webpack -p",
     "start": "webpack-dev-server"
@@ -10,12 +10,9 @@
   "author": "Tyler Murphy",
   "license": "ISC",
   "dependencies": {
-    "axios": "^0.14.0",
     "radium": "^0.18.1",
     "react": "^15.3.2",
-    "react-addons-css-transition-group": "^15.3.2",
     "react-bootstrap": "^0.30.5",
-    "react-delay-render": "0.0.42",
     "react-dom": "^15.3.2",
     "react-fontawesome": "^1.2.0",
     "react-router": "^2.0.0-rc5"
@@ -24,10 +21,8 @@
     "babel-core": "^6.17.0",
     "babel-loader": "^6.2.5",
     "babel-preset-react": "^6.16.0",
-    "css-loader": "^0.25.0",
-    "html-webpack-plugin": "^2.22.0",
-    "style-loader": "^0.13.1",
+    "html-webpack-plugin": "^2.24.0",
     "webpack": "^1.13.2",
-    "webpack-dev-server": "^1.16.1"
+    "webpack-dev-server": "^1.16.2"
   }
 }

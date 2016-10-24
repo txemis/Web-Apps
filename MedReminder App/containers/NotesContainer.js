@@ -34,24 +34,27 @@ var NotesContainer = React.createClass({
       // map one of the objects from object array 'NoteList'
       var noteDataMapped = listPartial.map(function(data, i) {
         return (
-          <section
-            key={'noteList'+ j}
-            className='container-fluid'>
 
+          <section className='container-fluid' key={'noteList'+ j} style={styles.noteContainer}>
             <div className='row'>
-              <div className='col-sm-6 col-sm-offset-3 text-center' style={styles.time}>
-                {data.time}
+
+              <div className='col-xs-4 col-xs-offset-1 col-sm-4 col-sm-offset-1 col-md-3 col-md-offset-2 col-lg-2 col-lg-offset-3'>
+                <div style={styles.time}>
+                  {data.time}
+                </div>
+              </div>
+
+              <div className='col-xs-7 col-sm-6 col-md-5 col-lg-4'>
+                <div className='row'>
+                  <div style={styles.entry}>
+                    {data.entry}
+                  </div>
+                </div>
               </div>
             </div>
 
             <div className='row'>
-              <div className='col-sm-6 col-sm-offset-3 text-center' style={styles.entry}>
-                {data.entry}
-              </div>
-            </div>
-
-            <div className='row'>
-              <div className='col-sm-6 col-sm-offset-3'>
+              <div className='col-xs-10 col-xs-offset-1 col-md-8 col-md-offset-2 col-lg-6 col-lg-offset-3'>
                 <hr />
               </div>
             </div>
@@ -80,12 +83,20 @@ var NotesContainer = React.createClass({
 });
 
 const styles = {
-  entry: {
-    fontSize: '22px'
+  noteContainer: {
+    padding: '15px'
   },
 
   time: {
-    fontSize: '30px'
+    fontSize: '40px',
+    color: '#50D2C0',
+    paddingBottom: '15px'
+  },
+
+  entry: {
+    color: '#1f1f1f',
+    fontSize: '22px',
+    fontWeight: '100'
   }
 };
 

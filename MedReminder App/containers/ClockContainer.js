@@ -1,7 +1,5 @@
 var React = require('react');
 var Clock = require('../components/Clock');
-var style = require('../styles/List_style');
-
 
   var ClockContainer = React.createClass({
 

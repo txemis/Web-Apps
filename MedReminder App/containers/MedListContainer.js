@@ -31,23 +31,30 @@ var MedListContainer = React.createClass({
       // map one of the objects from object array 'listData'
       var listDataMapped = listPartial.map(function(data, i) {
         return (
-          <section
-            key={'medlist_'+ j}
-            className='container-fluid'>
+
+          <section className='container-fluid' key={'medlist_'+ j} style={styles.medListContainer}>
             <div className='row'>
-              <div className='col-sm-4 col-sm-offset-2 text-right' style={styles.medication}>
-                {data.medication}
+
+              <div className='col-xs-4 col-xs-offset-1 col-sm-4 col-sm-offset-1 col-md-3 col-md-offset-2 col-lg-2 col-lg-offset-4'>
+                <div style={styles.medication}>
+                  {data.medication}
+                </div>
               </div>
-              <div className='col-sm-4' style={styles.dosage}>
-                {data.dosage}
+
+              <div className='col-xs-6 col-sm-6 col-md-5 col-lg-2 text-right'>
+                <div style={styles.dosage}>
+                  {data.dosage}
+                </div>
               </div>
             </div>
+
             <div className='row'>
-              <div className='col-sm-4 col-sm-offset-4'>
+              <div className='col-xs-10 col-xs-offset-1 col-md-8 col-md-offset-2 col-lg-4 col-lg-offset-4'>
                 <hr />
               </div>
             </div>
           </section>
+
         )
       });
 
@@ -72,12 +79,21 @@ var MedListContainer = React.createClass({
 });
 
 const styles = {
+  medListContainer: {
+    padding: '15px'
+  },
+
   medication: {
-    fontSize: '30px'
+    fontSize: '40px',
+    color: '#50D2C0',
+    paddingBottom: '15px'
   },
 
   dosage: {
-    fontSize: '22px'
+    color: '#1f1f1f',
+    fontSize: '26px',
+    fontWeight: '100',
+    paddingTop: '5px'
   }
 };
 
