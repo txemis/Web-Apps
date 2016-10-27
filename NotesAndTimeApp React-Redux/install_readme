@@ -1,0 +1,13 @@
+TITLE: Notes & Time App | React - Redux
+AUTHOR: Tyler Murphy
+
+
+INSTALLATION:
+1. Clone git repo:
+> git clone <remote repo url>
+
+2. Install dependencies
+> npm install
+
+3. Run dev server on localhost:8080
+> npm run start
