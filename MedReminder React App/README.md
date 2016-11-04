@@ -1,4 +1,4 @@
-#Medication Reminder App (ES5)
+#Medication Reminder App | React (ES5)
 ###Author: Tyler Murphy
 
 ---
