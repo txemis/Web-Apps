@@ -1,14 +1,14 @@
 #Medication Reminder App (ES5)
-###Tyler Murphy
+###Author: Tyler Murphy
 
 ---
 
 ###INSTALLATION:
 1. Install dependencies at root
-npm install
+  * npm install
 
 2. Run dev server on localhost:8080
-npm run start
+  * npm run start
 
 ---
 
