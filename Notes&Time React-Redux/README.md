@@ -1,4 +1,4 @@
-#Notes&Time App | React-Redux (ES6+)
+#Notes & Time App | React-Redux (ES6+)
 ###Author: Tyler Murphy
 
 ---

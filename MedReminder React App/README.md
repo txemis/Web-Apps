@@ -19,7 +19,7 @@ The app contains a static list of medications with times and dosages, with the i
 
 ---
 
-###FEATURES:
+###Features:
 - Clock determines alert status of list items under the 'Today' tab on the side menu.
 - User can select the 'Medications' tab to view a list of the medications and dose quantity for the patient.
 - User can add notes about the patient at any point by clicking the pencil in the top right corner of the Navbar. These notes can be viewed in the 'Notes' tab.
@@ -30,7 +30,7 @@ The app contains a static list of medications with times and dosages, with the i
 
 ---
 
-###FUTURE DIRECTIONS:
+###Future Directions:
 Presently I am rewriting this App in ES6+ and Redux to handle the following:
 - Handle State with Redux.
 - Write in with ES6+ syntax.
