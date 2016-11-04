@@ -3,20 +3,19 @@
 
 ---
 
-###INSTALLATION:
+###About:
+The application's events are based around a clock, the purpose being to alert a caretaker of upcoming medications that must be administered at specific times.
+
+The app contains a static list of medications with times and dosages, with the idea being that the patient's guardian has previously set these from their side of the app. When the clock is 15 minutes prior to the administration time, the list item is highlighted. When the clock passes the time, the list item is faded.
+
+---
+
+###Installation:
 1. Install dependencies at root
   * npm install
 
 2. Run dev server on localhost:8080
   * npm run start
-
----
-
-###About:
-The application's events are based around a clock, the purpose being to alert a
-caretaker of upcoming medications that must be administered at specific times.
-
-The app contains a static list of medications with times and dosages, with the idea being that the patient's guardian has previously set these from their side of the app. When the clock is 15 minutes prior to the administration time, the list item is highlighted. When the clock passes the time, the list item is faded.
 
 ---
 

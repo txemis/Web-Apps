@@ -10,7 +10,7 @@ This app is a component of the *MedReminder (ES6+) app*.
 
 ---
 
-###INSTALLATION:
+###Installation:
 1. Install dependencies at root
   * npm install
 
