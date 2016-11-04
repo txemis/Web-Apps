@@ -1,5 +1,5 @@
 #Wikipedia Viewer App (JS)
-###Author: Tyler Murphy
+###Author: Marshall Murphy
 
 ---
 

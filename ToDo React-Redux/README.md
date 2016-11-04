@@ -1,5 +1,5 @@
 #ToDo App | React-Redux (ES6+)
-###Author: Tyler Murphy
+###Author: Marshall Murphy
 
 
 ###About:
