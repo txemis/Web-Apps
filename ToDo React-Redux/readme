@@ -1,0 +1,28 @@
+TITLE: ToDo App using React + Redux + EC2015 (ES6+)
+AUTHOR: Tyler Murphy
+
+
+SYNOPSIS:
+This is the Redux "ToDo App", with source code from redux.js.org.
+
+
+FEATURES:
+
+
+FUTURE DIRECTIONS:
+
+
+INSTALLATION:
+1. Install dependencies:
+> npm install --save react react-dom react-router@2.0.0-rc5 react-redux radium react-bootstrap react-fontawesome
+> npm install --save-dev html-webpack-plugin webpack webpack-dev-server babel-core babel-loader babel-preset-react
+> npm install --save-dev babel-cli babel-preset-es2015
+
+2. Create the Dist (index.html, index_bundle.js) directory:
+> npm run production
+
+3. Run dev server on localhost:8080
+> npm run start
+
+
+Note: Make sure that es2015 is added to presets in the .babelrc file.
