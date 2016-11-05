@@ -10,7 +10,7 @@ function StartOver () {
   return (
     <div className='col-sm-12' style={space}>
       <Link to='/playerOne'>
-        <button type='button' className='btn btn-lg btn-danger'>Start Over</button>
+        <button type='button' className='btn btn-lg btn-info'>Start Over</button>
       </Link>
     </div>
   )

@@ -38,7 +38,7 @@ const styles = {
 
   time: {
     fontSize: '40px',
-    color: '#50D2C0',
+    color: '#FFA769',
     paddingBottom: '15px'
   },
 

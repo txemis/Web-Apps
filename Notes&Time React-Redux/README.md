@@ -6,7 +6,7 @@
 ###About:
 A simple React-Redux app written in ES6+ that allows the user to add new notes to a list, recording the time of entry, and displaying the list for the user.
 
-This app is a component of the *MedReminder (ES6+) app*.
+This app is a component of my *MedReminder (ES6+) app*.
 
 ---
 

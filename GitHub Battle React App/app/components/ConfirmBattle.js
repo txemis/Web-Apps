@@ -21,11 +21,11 @@ function ConfirmBattle ({isLoading, playersInfo, onInitiateBattle}) {
         </div>
         <div className='col-sm-8 col-sm-offset-2'>
           <div className='col-sm-12' style={space}>
-            <button type='button' className='btn btn-lg btn-success' onClick={onInitiateBattle}>Initiate Battle!</button>
+            <button type='button' className='btn btn-lg btn-primary' onClick={onInitiateBattle}>Initiate Battle!</button>
           </div>
           <div className='col-sm-12' style={space}>
             <Link to='/playerOne'>
-              <button type='button' className='btn btn-lg btn-danger'>Reselect Players</button>
+              <button type='button' className='btn btn-lg btn-info'>Reselect Players</button>
             </Link>
           </div>
         </div>

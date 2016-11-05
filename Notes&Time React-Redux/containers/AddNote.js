@@ -30,24 +30,26 @@ let AddNote = ({ dispatch }) => {
   }
 
   return (
-    <div className='row text-center'>
+    <div className='row text-center' style={styles.addNoteBlock}>
 
-      <form onSubmit={e => {
-        e.preventDefault()
-        if (!input.value.trim()) {
-          return
-        }
-        const noteTime = getTime()
-        dispatch(addNewNote(input.value, noteTime))
-        input.value = ''
-      }}>
+      <form
+        onSubmit={e => {
+          e.preventDefault()
+          if (!input.value.trim()) {
+            return
+          }
+          const noteTime = getTime()
+          dispatch(addNewNote(input.value, noteTime))
+          input.value = ''
+        }}>
 
-        <input ref={node => {
-          input = node
-        }} />
+        <input
+          style={styles.inputField}
+          placeholder='Enter new note'
+          ref={node => { input = node }} />
 
-        <button type="submit">
-          Add New Note
+        <button type="submit" className="btn btn-warning">
+          Add
         </button>
 
       </form>
@@ -55,5 +57,16 @@ let AddNote = ({ dispatch }) => {
   )
 }
 AddNote = connect()(AddNote)
+
+const styles= {
+  inputField: {
+    padding: '5px',
+    margin: '10px',
+    width: '400px'
+  },
+  addNoteBlock: {
+    paddingBottom: '25px'
+  }
+}
 
 export default AddNote

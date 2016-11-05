@@ -1,16 +1,17 @@
 import React from 'react'
 import { Link } from 'react-router'
-import { transparentBg } from '../styles'
+import { transparentBg, topSpacing } from '../styles'
 import MainContainer from './MainContainer'
 
 function Home () {
   return (
     <MainContainer>
-      <h1>Github Battle</h1>
-      <p className='lead'>What even is a jQuery?</p>
-      <Link to='/playerOne'>
-        <button type='button' className='btn btn-lg btn-success'>Get Started</button>
-      </Link>
+      <div style={topSpacing}>
+        <h1>Github Battle</h1>
+        <Link to='/playerOne'>
+          <button type='button' className='btn btn-lg btn-primary'>Get Started</button>
+        </Link>
+      </div>
     </MainContainer>
   )
 }

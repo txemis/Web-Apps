@@ -20,11 +20,11 @@ class NotesContainer extends Component {
 
     const notesListMaster = [{
         time: '6:30 am',
-        entry: 'patient morning routines (washroom, hygiene, clothes) completed.'
+        entry: 'Patient morning routines (washroom, hygiene, clothes) completed.'
       },
       {
         time: '7:15 am',
-        entry: 'patient received and ate all of their breakfast.'
+        entry: 'Patient received and ate all of their breakfast.'
       },
       {
         time: '8:30 am',
@@ -95,7 +95,7 @@ const styles = {
 
   time: {
     fontSize: '40px',
-    color: '#50D2C0',
+    color: '#FFA769',
     paddingBottom: '15px'
   },
 
