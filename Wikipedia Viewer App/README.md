@@ -11,4 +11,4 @@ Relays the user's search query to the Wikipedia API, returning a list of relevan
 
 ###Live Demo:
 
-Codepen: http://codepen.io/tylermurphy/pen/kXOwvZ
+Codepen: http://codepen.io/marshallmurphy/pen/kXOwvZ

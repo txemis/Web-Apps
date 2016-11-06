@@ -9,4 +9,4 @@ Uses the geolocation data of the user, sending it to the Open Weather API, to re
 ---
 
 ###Live Demo:
-Codepen: http://codepen.io/tylermurphy/pen/QEPwJy
+Codepen: http://codepen.io/marshallmurphy/pen/QEPwJy
