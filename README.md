@@ -3,6 +3,16 @@ Various web application projects by Marshall Murphy
 
 ---
 
+## Twitter-Like Clone: React(ES6+) + Redux + Firebase
+An app that duplicates similar qualities of Twitter.
+User signs into their profile via Facebook Authentication.
+The user can create messages for others to view, like, comment on.
+Users can view all messages in their feed, or view all from a single user.
+The authentication data and feed data is stored in Firebase.
+All state is stored in the Redux single-state tree.
+
+---
+
 ## Medication Reminder: React (ES5) App
 Reminds a caregiver of important times of day to administer a patient's medications.
 Allows caregiver to log various notes about the patient throughout the day.
