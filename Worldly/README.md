@@ -1,5 +1,5 @@
 #Worldly
-##Your Friendly Neighborhood Travel Journal
+*Your Friendly Neighborhood Travel Journal*
 ###Author: Marshall Murphy
 
 ---
