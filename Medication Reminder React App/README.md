@@ -10,15 +10,6 @@ The app contains a static list of medications with times and dosages, with the i
 
 ---
 
-###Installation:
-1. Install dependencies at root
-  * npm install
-
-2. Run dev server on localhost:8080
-  * npm run start
-
----
-
 ###Features:
 - Clock determines alert status of list items under the 'Today' tab on the side menu.
 - User can select the 'Medications' tab to view a list of the medications and dose quantity for the patient.
@@ -27,6 +18,28 @@ The app contains a static list of medications with times and dosages, with the i
   * This feature is 'concept only' in this version.
   * Clicking these tabs in the side menu opens a modal, with the 'call' button adding to the Notes tab that the call was made.
   * Some example notes have been included for display purposes.
+
+---
+
+### Screenshots
+
+![Screen1]
+(https://github.com/marshallmurphy/Web-Apps/blob/master/Medication%20Reminder%20React%20App/screenshots/screen1.PNG)
+
+---
+
+![Screen2]
+(https://github.com/marshallmurphy/Web-Apps/blob/master/Medication%20Reminder%20React%20App/screenshots/screen2.png)
+
+---
+
+![Screen3]
+(https://github.com/marshallmurphy/Web-Apps/blob/master/Medication%20Reminder%20React%20App/screenshots/screen3.png)
+
+---
+
+![Screen4]
+(https://github.com/marshallmurphy/Web-Apps/blob/master/Medication%20Reminder%20React%20App/screenshots/screen4.png)
 
 ---
 

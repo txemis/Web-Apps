@@ -20,3 +20,12 @@ This app is a component of my *MedReminder (ES6+) app*.
 
 2. Run dev server on localhost:8080
   * npm run start
+
+---
+
+### Screenshots
+
+![Screen1]
+(https://github.com/marshallmurphy/Web-Apps/blob/master/Notes%26Time%20React-Redux/screenshots/screen.PNG)
+
+---

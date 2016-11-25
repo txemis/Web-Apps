@@ -10,3 +10,13 @@ Uses the geolocation data of the user, sending it to the Open Weather API, to re
 
 ###Live Demo:
 Codepen: http://codepen.io/marshallmurphy/pen/QEPwJy
+
+---
+
+### Screenshots
+
+![Screen1]
+(https://github.com/marshallmurphy/Web-Apps/blob/master/Geolocation%20Weather%20App/screenshots/screenshot.PNG
+)
+
+---

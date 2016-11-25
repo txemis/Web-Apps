@@ -31,8 +31,12 @@ Worldly uses Google's Firebase for storing a user's data, and uses Firebase with
 (https://github.com/marshallmurphy/Web-Apps/blob/master/Worldly/images/home.PNG
 )
 
+---
+
 ![Results]
 (https://github.com/marshallmurphy/Web-Apps/blob/master/Worldly/images/Results.PNG)
+
+---
 
 ![Journal Entry]
 (https://github.com/marshallmurphy/Web-Apps/blob/master/Worldly/images/Entry.PNG)

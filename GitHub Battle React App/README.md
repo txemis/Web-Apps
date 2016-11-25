@@ -19,3 +19,20 @@ The app now implements *babel-preset-stage-3* in order to use the experimental *
 
 2. Run dev server on localhost:8080
   * npm run start
+
+---
+
+### Screenshots
+
+![Screen1]
+(https://github.com/marshallmurphy/Web-Apps/blob/master/GitHub%20Battle%20React%20App/screenshots/home.PNG)
+
+---
+
+![Screen2]
+(https://github.com/marshallmurphy/Web-Apps/blob/master/GitHub%20Battle%20React%20App/screenshots/player1.PNG)
+
+---
+
+![Screen3]
+(https://github.com/marshallmurphy/Web-Apps/blob/master/GitHub%20Battle%20React%20App/screenshots/confirm.PNG)

@@ -21,3 +21,10 @@ The user can cross items off the list as they become completed. They can also fi
 
 2. Run dev server on localhost:8080
   * npm run start
+
+---
+
+### Screenshots
+
+![Screen1]
+(https://github.com/marshallmurphy/Web-Apps/blob/master/ToDo%20React-Redux/screenshots/screen.PNG)
