@@ -3,6 +3,18 @@ Various web application projects by Marshall Murphy
 
 ---
 
+## Worldly: React-Redux
+*Your Friendly Neighborhood Travel Journal*
+
+**Worldly** is a React-Redux web application that allows you to write about all your thoughts and experiences while travelling. Worldly uses Facebook for authorization and Firebase for data persistence.
+
+---
+
+## Duckr: A React-Redux Twitter Clone
+**Duckr** is a sort-of *Twitter* clone. Users log in via Facebook authorization and are able to post various 140 character 'tweets' to their home feed, where others can Like and Comment on.
+
+---
+
 ## Medication Reminder: React (ES5) App
 Reminds a caregiver of important times of day to administer a patient's medications.
 Allows caregiver to log various notes about the patient throughout the day.
@@ -17,11 +29,14 @@ A ToDo web application built on React-Redux and written in ES6+.
 Allows user to build a list of items to be done.
 User can cross items off the list as they become completed, and can filter item visibility based on whether the have been completed, have not been completed, or view a full list of all completed and uncompleted items.
 
+Heroku: https://frozen-mesa-14585.herokuapp.com/
+
 ---
 
 ## Notes & Time: React-Redux (ES6+) App
 A simple React-Redux app written in ES6+ that allows the user to add new notes to a list, recording the time of entry, and displaying the list for the user.
-This app is a component of the MedReminder (ES6+) app.
+
+Heroku: https://thawing-hollows-98100.herokuapp.com/
 
 ---
 
@@ -45,5 +60,3 @@ Codepen: http://codepen.io/marshallmurphy/pen/QEPwJy
 Relays the user's search query to the Wikipedia API, returning a list of relevant results.
 
 Codepen: http://codepen.io/marshallmurphy/pen/kXOwvZ
-
----

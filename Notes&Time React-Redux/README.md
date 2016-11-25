@@ -3,6 +3,10 @@
 
 ---
 
+On Heroku: https://thawing-hollows-98100.herokuapp.com/
+
+---
+
 ###About:
 A simple React-Redux app written in ES6+ that allows the user to add new notes to a list, recording the time of entry, and displaying the list for the user.
 

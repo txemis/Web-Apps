@@ -1,0 +1,106 @@
+.newDecisionTop {
+  background: #fff;
+  padding: 11px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  color: #1877E6;
+  font-size: 23px;
+  font-weight: 100;
+}
+
+.pointer {
+  cursor: pointer;
+}
+
+.newDecisionInputContainer {
+  composes: baseTextAreaContainer from 'sharedStyles/styles.css';
+}
+
+.newDecisionInput {
+  composes: baseTextArea from 'sharedStyles/styles.css';
+  border-width: 0;
+}
+
+.darkBtn {
+  composes: font-default from 'sharedStyles/styles.css';
+  font-size: 20px;
+  color: #fff;
+  text-decoration: none;
+  transition: all .3s;
+}
+
+.darkBtn:hover {
+  text-decoration: none;
+  cursor: pointer;
+}
+
+
+.submitDecisionBtn:disabled {
+  background: #C6C6C6;
+  border: 1px solid #C6C6C6;
+}
+
+.titleContainer {
+  composes: newDecisionInputContainer;
+  height: 40px;
+}
+
+.titleContainerTop {
+  composes: newDecisionInputContainer;
+  height: 40px;
+  margin-top: 16px;
+}
+
+.titleInput {
+  composes: font-openSans from 'sharedStyles/styles.css';
+  border: none;
+  border-radius: 3px;
+  font-size: 18px;
+  width: 100%;
+  padding: 5px 10px;
+  text-align: center;
+}
+
+.location {
+  composes: font-openSans from 'sharedStyles/styles.css';
+  border: none;
+  border-radius: 3px;
+  font-size: 18px;
+  width: 100%;
+  padding: 5px 10px;
+  text-align: center;
+}
+
+.textArea {
+  composes: font-openSans from 'sharedStyles/styles.css';
+  height: 450%;
+  width: 100%;
+  padding: 20px;
+  border-radius: 3px;
+  border: none;
+  font-size: 18px;
+}
+
+.colon {
+  font-size: 36px;
+  position: relative;
+  bottom: 10px;
+  color: #fff;
+}
+
+.submitDecisionBtn {
+  composes: font-default from 'sharedStyles/styles.css';
+  background: #91A1C4;
+  position: relative;
+  top: 24em;
+  color: white;
+  font-weight: 100;
+  padding: 10px 20px 10px;
+  border: solid 3px #fff;
+  border-radius: 3px;
+  font-size: 16px;
+  cursor: pointer;
+  transition: .3s;
+  letter-spacing: 2px;
+}

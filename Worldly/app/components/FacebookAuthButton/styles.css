@@ -1,13 +1,17 @@
 .button {
-  background: #3B5998;
-  color: #fff;
-  padding: 15px;
-  border-radius: 5px;
-  border-width: 0;
-  font-size: 25px;
+  composes: font-default from 'sharedStyles/styles.css';  background: #6d7993;
+  color: white;
+  font-weight: 100;
+  padding: 10px 20px 10px;
+  border: solid 3px #fff;
+  border-radius: 3px;
+  font-size: 20px;
   cursor: pointer;
+  margin: 3em 1em;
+  transition: .3s;
+  letter-spacing: 2px;
 }
 
 .button:hover {
-  background: #1542A0;
+  transform: scale(1.2);
 }

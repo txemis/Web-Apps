@@ -1,5 +1,6 @@
 .container {
   composes: centeredContainer from 'sharedStyles/styles.css';
+  margin-top: 15%;
 }
 
 .title {

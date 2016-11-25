@@ -1,0 +1,28 @@
+.decisionContainer {
+  width: 70%;
+  max-width: 1000px;
+  margin: 20px auto;
+  padding: 10px;
+  border-left: 3px solid #96858f;
+  cursor: pointer;
+  background-color: #6d7993;
+  transition: all .6s;
+  color: #fff;
+}
+
+.title {
+  composes: font-openSans from 'sharedStyles/styles.css';
+  margin-bottom: 5px;
+  font-size: 26px;
+  letter-spacing: 1px;
+}
+
+.location {
+  composes: font-default from 'sharedStyles/styles.css';
+  font-size: 16px;
+}
+
+.dateOfEntry {
+  composes: font-default from 'sharedStyles/styles.css';
+  font-size: 14px;
+}

@@ -1,35 +1,37 @@
 import React, { PropTypes } from 'react'
 import { connect } from 'react-redux'
-import { Results } from 'components'
+import { Countries } from 'components'
 import { setAndHandleDecisionsListener } from 'redux/modules/decisions'
 import { decisionsAreStale } from 'helpers/utils'
+import { addCountryToState } from 'redux/modules/countries'
 
-const ResultsContainer = React.createClass({
+const CountriesContainer = React.createClass({
   propTypes: {
     isFetching: PropTypes.bool.isRequired,
     error: PropTypes.string.isRequired,
     decisions: PropTypes.array.isRequired,
     lastUpdated: PropTypes.number.isRequired,
-    decisionsMade: PropTypes.object.isRequired,
     setAndHandleDecisionsListener: PropTypes.func.isRequired,
   },
   contextTypes: {
     router: PropTypes.object.isRequired,
   },
+
   componentDidMount () {
     if (decisionsAreStale(this.props.lastUpdated)) {
       this.props.setAndHandleDecisionsListener()
     }
   },
+
   handleToJournalEntry (decisionId) {
     this.context.router.push('/entry/' + decisionId)
   },
+
   render () {
     return (
-      <Results
+      <Countries
         isFetching={this.props.isFetching}
         error={this.props.error}
-        decisionsMade={this.props.decisionsMade}
         decisions={this.props.decisions}
         onToJournalEntry={this.handleToJournalEntry}/>
     )
@@ -39,13 +41,15 @@ const ResultsContainer = React.createClass({
 function mapStateToProps ({decisions, users}) {
   const decs = decisions.decisions
   return {
-    decisionsMade: users[users.authedId].decisionsMade,
     isFetching: decisions.isFetching,
     lastUpdated: decisions.lastUpdated,
     decisions: Object.keys(decs)
       .sort((a,b) => decs[b].timestamp - decs[a].timestamp)
       .map((id) => decs[id]),
     error: decisions.error,
+    // make a function that'll count the number of occurances
+    // of each country
+
   }
 }
 
@@ -58,4 +62,4 @@ function mapDispatchToProps (dispatch) {
 export default connect(
   mapStateToProps,
   mapDispatchToProps,
-)(ResultsContainer)
+)(CountriesContainer)

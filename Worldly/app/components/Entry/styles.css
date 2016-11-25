@@ -1,0 +1,23 @@
+.title {
+  font-size: 56px;
+  text-align: center;
+  color: white;
+}
+
+.date {
+  composes: center from 'sharedStyles/styles.css';
+  font-size: 20px;
+  color: white;
+}
+
+.location {
+  font-size: 24px;
+  padding: .5em 1em;
+  color: white;
+}
+
+.journalEntry {
+  font-size: 16px;
+  padding: .5em 3em;
+  color: white;
+}
