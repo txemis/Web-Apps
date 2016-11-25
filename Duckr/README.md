@@ -25,8 +25,12 @@
 (https://github.com/marshallmurphy/Web-Apps/blob/master/Duckr/screenshots/screen1.PNG
 )
 
+---
+
 ![Screen2]
 (https://github.com/marshallmurphy/Web-Apps/blob/master/Duckr/screenshots/screen2.PNG)
+
+---
 
 ![Screen3]
 (https://github.com/marshallmurphy/Web-Apps/blob/master/Duckr/screenshots/screen3.PNG)
